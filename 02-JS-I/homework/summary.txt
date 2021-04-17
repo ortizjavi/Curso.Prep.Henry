@@ -1,0 +1,15 @@
+	* Variables
+
+		Una variable es una forma de almacenar un valor que luego se puede modificar o no. JavaScript usa variables no tipadas.
+		Las palabras reservadas en JS para declarar variables son: const, let y var.
+	* Strings
+		Un string es un tipo de dato el cuál se representa con comillas simples o dobles. Es una cadena de carácteres.
+	* Funciones (argumentos, `return`)
+		Una función es una relación entre un input y un output. Particularmente en JS estás son un callable object, se inicializan de tres maneras diferentes:
+			function myFunction(){}
+			var myFunction = function(){}
+			var myFunction = () => {}
+	* Declaraciones `if`
+		Las declaraciones 'if' reciben un valor booleano y ejecutan el código dentro del mismo si el valor es true. Son sentencias para el control de flujo.
+	* Valores booleanos (`true`, `false`)
+		Los valores booleanos son propios del Algebral de Bool y pueden tener dos valores: 1 o 0.
