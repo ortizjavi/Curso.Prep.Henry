@@ -1,0 +1,15 @@
+* La palabra reservada `for` es útilizada en programación para realizar un bucle. Este bucle significa que el código dentro deĺ `for` se reptirá n veces hasta que se cumpla una condición de quiebre.
+
+* `&&` `||` y `!` son operaciones lógicas y provienen del Algebra de Boole. Significan `AND` `OR` y `NOT` correspondientemente.
+Son operaciones entre valores Booleanos que devuelve otro Booleano. 
+
+	- El operador `&&` devolverá true sólo sí ambos valores son true. Por lo contrario devolverá false. Recibe dos inputs, por ejemplo: false && true = false
+
+	- El operador `||` devuelve false sólo sí ambos valores son false. Por lo contrario devolverá true. Recibe dos inputs, por ejemplo: false || true = true
+ 
+
+	- Y por último, el operador de negación (`!`) devuelve lo contrario al valor pasado. Recibe un input sólamente y tendrá que estár entre paréntesis. Por ejemplo:
+		!(false) = true
+		!(false && true) = true
+		!(false || true) = false
+

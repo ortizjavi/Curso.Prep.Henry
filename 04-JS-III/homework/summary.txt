@@ -1,0 +1,11 @@
+ * Arrays
+
+ Los arreglos son una estructura de datos que pueden contener múltiples elementos, usualmente el mismo tipo de elemento. Un array en JS se define simplemente cómo [].
+ Para acceder a cada elemento se utiliza nombreArray[indice] siendo el índice un número de 0 a N. Sí se quiere saber cuantos elementos contiene un array se usa el método .length
+ Por ejemplo para recorrer todos sus datos se podría usar un bucle for:
+ 	for (let indice = 0; indice < nombreArray.length; indice ++){
+ 		nombreArray[indice]; // do something
+ 	}
+
+ Para agregar un elemento al inicio del array se puede utilizar el método unshift. Así mismo para agregar al final del array se utiliza push.
+ Para remover un elemento del principio del array se utiliza shift y pop para sacar su último elemento.
