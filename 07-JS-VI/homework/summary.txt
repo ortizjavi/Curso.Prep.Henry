@@ -1,0 +1,4 @@
+* Funciones Callback
+
+Un callback es una función que se envía a otra función y se ejecuta con diferentes intenciones.
+Por ejemplo puede ser para tratamiento de errores. O mismo las funciones de map, forEach, etcétera están recibiendo una callback function.
