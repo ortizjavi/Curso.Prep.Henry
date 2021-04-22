@@ -1,0 +1,87 @@
+h1 {
+	color: seagreen;
+}
+
+img {
+	width: 400px;
+	height: 100%;
+}
+
+
+html {
+	height: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+
+html::before {
+	content: "";
+	background: url("https://avante.biz/wp-content/uploads/Background-Images-For-Websites/Background-Images-For-Websites-030.jpg") repeat-y center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	opacity: 0.30;
+	z-index: -1;
+}
+
+li {
+	position: relative;
+	width: 400px;
+	height: 300px;
+	margin: 5px auto;
+}
+
+.vertical-contianer {
+	display: -webkit-flex;
+	display:         flex;
+	-webkit-align-items: center;
+	align-items: center; 
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+#imageList{
+	position: absolute;
+	margin: 0 0;
+	list-style-type: circle;
+    text-align: center;
+    vertical-align: middle;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+#thirdDiv{
+	height: 600px;
+	width: 500px;
+	margin: 0 auto;
+	background-color: lightsteelblue;
+	border: 1.5px groove springgreen;
+	padding: 50px;
+}
+
+#spanId{
+	font-size: 18px;
+	margin: 50px;
+}
+
+.divClass{
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
