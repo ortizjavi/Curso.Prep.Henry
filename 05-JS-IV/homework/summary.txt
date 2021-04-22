@@ -1,0 +1,39 @@
+* Objetos
+	Los objetos son contenedores de múltiplos tipos de datos. En javascript se instancian con las llaves. (var obj = {})
+	Los tipos de datos son guardados por pares de clave-valor, dónde necesariamente las claves son únicas (no así, los valores). Para acceder a un valor podemos hacerlo utilizando su clave o identificador único.
+
+* Propiedades
+	Las propiedades de un objeto son dichos pares clave-valor que se van guardando en un objeto, se pueden agregar y eliminar (esto último con la palabre clave delete)-
+
+* Métodos
+	Los métodos de un objeto se presentan cuándo el valor de una propiedad es una función. Por ejemplo: .push, .pop, .shift, .length, etc...
+
+* Bucle `for…in`
+	Un bucle for...in se utiliza para recorrer las claves de un conjunto de pares clave-valor. Ya que no podemos acceder con un índice a las propiedades de un objeto cómo en un array.
+	Se utiliza de la siguiente manera:
+		for (let clave in miObjeto){
+			let valor = miObjeto[clave];
+		}
+	La variable clave va siendo reemplzada por las distintas claves del conjunto de claves del objeto.
+
+* Notación de puntos vs notación de corchetes
+	
+	La notación de puntos se utiliza para claves de tipo string qué no contengan valores especiales cómo espacios, *, /, etc...
+
+	Generalmente su uso se da más en los métodos, ya que los nombres de los mismos deben respetar el mismo formato.
+
+	En cambio, el uso de corchetes se utiliza para acceder a propiedades de cualquier tipo de datos y se pueden utilizar variables.
+
+
+	Por ejemplo:
+		var obj = {
+			"estoEsUnaFuncionComoClave" : function (){
+				return "Hola";
+			},
+			1 : "Soy un valor",
+			"Esto no puede ser utilizado por la notación de puntos" : function () {
+				return "Hola";
+			}
+		}
+
+		En este ejemplo el primer clave valor podría usarse con notación de puntos, el resto daría error de sintaxis en el compilador.
