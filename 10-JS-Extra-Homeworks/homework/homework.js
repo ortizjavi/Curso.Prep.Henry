@@ -1,3 +1,18 @@
+function agregarStringInvertida() {
+  String.prototype.reverse = function (){
+    let reversedStr = "";
+    for (let i = this.length - 1; i >= 0; i--){
+      reversedStr += this[i];
+    }
+    return reversedStr;
+  }
+}
+
+
+function removerStringInvertida(){
+  delete String.prototype.reverse;
+}
+
 // No cambies los nombres de las funciones.
 
 function deObjetoAmatriz(objeto){
@@ -10,6 +25,11 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  let matriz = [];
+  for (key in objeto){
+    matriz.push([key, objeto[key]]);
+  }
+  return matriz;
 }
 
 
@@ -18,6 +38,16 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+  let objetoContador = {};
+  for (let index in string){
+    let c = string[index];
+    if (objetoContador[c]){
+      objetoContador[c]++;
+    } else {
+      objetoContador[c] = 1;
+    }
+  }
+  return objetoContador;
 }
 
 
@@ -26,7 +56,21 @@ function capToFront(s) {
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
   //Escribe tu código aquí
+  let mayus = "";
+  let minus = "";
+  for (let index in s){
+    let c = s[index];
+    if (c === c.toUpperCase()){
+      mayus += c;
+    } else {
+      minus += c;
+    }
+  }
+
+  return mayus + minus;
 }
+
+
 
 
 function asAmirror(str) {
@@ -35,6 +79,10 @@ function asAmirror(str) {
   //pero con cada una de sus palabras invertidas, como si fuera un espejo.
   //Ej: Recibe ---> "The Henry Challenge is close!" || Devuelve ---> "ehT yrneH egnellahC si !esolc"
   //Escribe tu código aquí
+  agregarStringInvertida();
+  return str.split(' ').map( palabra => {
+    return palabra.reverse();
+  }).join(' ');
 } 
 
 
@@ -43,6 +91,9 @@ function capicua(numero){
   //La misma debe retornar: "Es capicua" si el número se número que se lee igual de 
   //izquierda a derecha que de derecha a izquierda. Caso contrario retorna "No es capicua"
   //Escribe tu código aquí
+  agregarStringInvertida();
+  const str = numero.toString();
+  return str === str.reverse() ? "Es capicua" : "No es capicua";
 }
 
 
@@ -50,6 +101,23 @@ function deleteAbc(cadena){
   //Define una función que elimine las letras "a", "b" y "c" de la cadena dada 
   //y devuelva la versión modificada o la misma cadena, en caso de contener dichas letras.
   //Escribe tu código aquí
+  
+  removerStringInvertida(); /* Raro problema con jest, dónde el expect imprime la funcion del prototype 'reverse'*/
+
+
+  let nuevoArray = "";
+  const filtrarCaracteres = {"a" : true, "b" : true, "c" : true}
+
+
+
+  for (let index in cadena){
+    let c = cadena[index];
+
+    if (!filtrarCaracteres[c]){
+      nuevoArray += c;
+    }
+  }
+  return nuevoArray;
 }
 
 
@@ -57,6 +125,9 @@ function sortArray(arr) {
   //La función recibe una matriz de strings. Ordena la matriz en orden creciente de longitudes de cadena
   //Ej: Recibe ---> ["You", "are", "beautiful", "looking"] || Devuelve ---> [“You", "are", "looking", "beautiful"]
   //Escribe tu código aquí
+  return arr.sort((a, b) => {
+    return a.length - b.length;
+  })
 }
 
 
@@ -65,7 +136,18 @@ function buscoInterseccion(arreglo1, arreglo2){
   //retornar un nuevo array con la intersección de ambos elementos. (Ej: [4,2,3] unión [1,3,4] = [3,4].
   //Si no tienen elementos en común, retornar un arreglo vacío.
   //Aclaración: los arreglos no necesariamente tienen la misma longitud
-  //Escribe tu código aquí  
+  //Escribe tu código aquí
+  let objeto = {}, intersección = [];  
+  
+  arreglo1.forEach(value => objeto[value] = true);
+
+  arreglo2.forEach(value => {
+    if (objeto[value]){
+      intersección.push(value);
+    }
+  })
+
+  return intersección;
 }
 
 
