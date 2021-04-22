@@ -1,0 +1,12 @@
+* `prototype`
+	El prototype es un objeto perteneciente a las clases de JavaScript qué permite definir funciones una sóla vez. Gracias a prototype las funciones son definidas una sola vez por clase, ahorrando mucha memoria.
+
+* _Constructors_ (de Clases)
+
+Un constructor se utiliza para declarar e inicializar los atributos que va a tener un objeto. 
+
+Por ejemplo puede requerir ciertas variables para poder instanciar un objeto:
+	function Clase(unValor){
+		this.valorDeLaClase = unValor;
+	}
+En este caso estamos determinando que los objetos de Clase recibirán un valor para poder inicializarse.
